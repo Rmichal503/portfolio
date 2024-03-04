@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Phags+Pa&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+    .bg-light{
+        @apply inset-0 bg-gradient-to-tr from-background/95 to-background from-90% to-95%
+    }
+    .nav_btn{
+        @apply text-text p-1 md:text-lg transition-colors duration-500 hover:text-accent cursor-pointer 
+    }
+    .contact_input{
+        @apply box-border block shadow-inner bg-secondary text-text placeholder:text-text/70 rounded-md text-sm md:text-base w-3/4
+    }
+    .btn_primary{
+        @apply w-fit bg-primary px-3 py-1 text-text hover:bg-primary/70 hover:rounded-xl transition-all duration-300 rounded-md
+    }
+    .bg-img{
+        background-image: url('/code_dalle_tele.png');
+        background-size: cover;
+    }
+}

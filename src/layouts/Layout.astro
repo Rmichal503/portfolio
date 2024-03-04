@@ -1,0 +1,32 @@
+---
+import "../assets/tailwind.css";
+import ViewTransitions from "../../node_modules/astro/components/ViewTransitions.astro";
+import Container from "../components/Container.astro";
+import Header from "../components/Header.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+	<ViewTransitions/>
+  </head>
+  <body
+    class="bg-background w-screen h-screen max-h-screen text-text flex flex-col p-2 inset-0 md:overflow-hidden box-border"
+  >
+    <Header />
+    <Container>
+      <slot />
+    </Container>
+  </body>
+</html>
